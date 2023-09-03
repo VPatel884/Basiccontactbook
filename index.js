@@ -36,5 +36,24 @@ function exit() {
   process.exit();
 }
 
+while (true) {
+  let choose = readlineSync.question('Enter your choice: ')
+  mainMenu();
 
+  switch(choose) {
+    case '1' :
+      addContact();
+      break;
+    case '2' :
+      viewContact()
+      break;
+    case '3' :
+      console.log('Thank you!')
+      exit()
+      break;
+      default :
+      console.log('Invalid Entry.')
+      console.log('Please choose a valid option.')
+  }
+}
 
