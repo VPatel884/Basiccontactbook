@@ -1,6 +1,6 @@
 const readlineSync = require('readline-sync');
 
-let contact = [];
+const contact = [];
 
 function mainMenu() {
   console.log('\nContact Book Menu: ');
@@ -11,9 +11,9 @@ function mainMenu() {
 
 function addContact() {
   console.log('\nAdd A New Contact');
-  let name = readlineSync.question('Enter Name: ');
-  let mobileNo = readlineSync.question('Enter Mobile Number: ');
-  let email = readlineSync.question('Enter Email: ');
+  const name = readlineSync.question('Enter Name: ');
+  const mobileNo = readlineSync.question('Enter Mobile Number: ');
+  const email = readlineSync.question('Enter Email: ');
 
   contact.push({name,mobileNo,email});
   console.log('Contact Added Successfully.')
@@ -28,6 +28,7 @@ function viewContact() {
       console.log('Name: ',contact.name);
       console.log('Mobile Number: ',contact.mobileNo);
       console.log('Email: ',contact.email);
+      console.log('--------------')
     });
   }
 }
@@ -38,7 +39,7 @@ function exit() {
 
 while (true) {
   mainMenu();
-  let choose = readlineSync.question('Enter your choice: ')
+  const choose = readlineSync.question('Enter your choice: ')
   
 
   switch(choose) {
