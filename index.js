@@ -19,3 +19,16 @@ function addContact() {
   console.log('Contact Added Successfully.')
 }
 
+function viewContact() {
+  console.log('\nCantacts: ');
+  if(contact.length === 0) {
+    console.log('No Contacts to display.');
+  } else {
+    contact.forEach((contact) => {
+      console.log('Name: ',contact.name);
+      console.log('Mobile Number: ',contact.mobileNo);
+      console.log('Email: ',contact.email);
+    });
+  }
+}
+
