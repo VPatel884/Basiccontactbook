@@ -37,8 +37,9 @@ function exit() {
 }
 
 while (true) {
-  let choose = readlineSync.question('Enter your choice: ')
   mainMenu();
+  let choose = readlineSync.question('Enter your choice: ')
+  
 
   switch(choose) {
     case '1' :
