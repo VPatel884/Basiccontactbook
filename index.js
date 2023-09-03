@@ -32,3 +32,9 @@ function viewContact() {
   }
 }
 
+function exit() {
+  process.exit();
+}
+
+
+
